@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sanjana ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    background:#ffd6df;
+    color:#663d49;
+}
+
+.page{
+    display:none;
+    min-height:100vh;
+    width:100%;
+    padding:25px;
+    position:relative;
+    overflow-y:auto;
+
+    background:
+    radial-gradient(circle at 10% 20%,rgba(255,255,255,.6) 0 5px,transparent 6px),
+    radial-gradient(circle at 80% 30%,rgba(255,255,255,.5) 0 4px,transparent 5px),
+    repeating-linear-gradient(
+        90deg,
+        #f8d7df 0px,
+        #f8d7df 28px,
+        #f3c8d5 29px,
+        #f3c8d5 32px,
+        #e8efcf 33px,
+        #e8efcf 36px
+    );
+}
+
+.page.active{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    animation:pageEnter .8s ease;
+}
+
+@keyframes pageEnter{
+    from{
+        opacity:0;
+        transform:scale(.96);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* ================= FLOATING HEARTS ================= */
+
+.floating-hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:999;
+}
+
+.float-heart{
+    position:absolute;
+    bottom:-50px;
+    color:#e96b88;
+    font-size:22px;
+    animation:floatHeart linear forwards;
+    opacity:.8;
+    filter:drop-shadow(0 3px 5px rgba(180,60,90,.2));
+}
+
+@keyframes floatHeart{
+    0%{
+        transform:translateY(0) rotate(0) scale(.7);
+        opacity:0;
+    }
+    10%{
+        opacity:.8;
+    }
+    50%{
+        transform:translateY(-50vh) rotate(180deg) scale(1);
+    }
+    100%{
+        transform:translateY(-110vh) rotate(360deg) scale(1.3);
+        opacity:0;
+    }
+}
+
+/* ================= SPARKLES ================= */
+
+.sparkle{
+    position:absolute;
+    color:white;
+    font-size:25px;
+    pointer-events:none;
+    animation:sparkleAnim 2s infinite ease-in-out;
+}
+
+@keyframes sparkleAnim{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.5) rotate(0);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.3) rotate(180deg);
+    }
+}
+
+/* ================= TEXT ================= */
+
+h1{
+    font-family:'Pacifico',cursive;
+    color:#d65d79;
+    font-size:clamp(40px,8vw,80px);
+    text-align:center;
+    text-shadow:2px 3px 0 white;
+    animation:titleFloat 3s ease-in-out infinite;
+}
+
+@keyframes titleFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+h2{
+    font-family:'Patrick Hand',cursive;
+    font-size:clamp(30px,5vw,50px);
+    color:#c65370;
+    text-align:center;
+}
+
+.typing-box{
+    min-height:70px;
+    max-width:750px;
+    font-family:'Patrick Hand',cursive;
+    font-size:24px;
+    text-align:center;
+    line-height:1.5;
+    padding:10px;
+}
+
+/* ================= BUTTON ================= */
+
+.next-btn{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#df6680;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
+    box-shadow:0 6px 0 #ae3f58;
+    transition:.25s;
+    animation:buttonPulse 2s infinite;
+}
+
+.next-btn:hover{
+    transform:translateY(-5px) scale(1.06);
+    box-shadow:0 10px 20px rgba(190,60,90,.3);
+}
+
+@keyframes buttonPulse{
+    0%,100%{
+        box-shadow:0 6px 0 #ae3f58;
+    }
+    50%{
+        box-shadow:0 8px 20px rgba(200,70,100,.3);
+    }
+}
+
+/* ================= PAGE 1 ================= */
+
+#page1{
+    background:linear-gradient(90deg,#fff6f8 55%,#d85e79 55%);
+}
+
+.lock-box{
+    padding:35px;
+    width:min(500px,95%);
+    text-align:center;
+    animation:lockAppear 1s ease;
+}
+
+@keyframes lockAppear{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.passcode{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin:20px;
+}
+
+.pass-dot{
+    width:55px;
+    height:58px;
+    background:#f6d9df;
+    border:3px solid #cc5874;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    transition:.2s;
+}
+
+.pass-dot:not(:empty){
+    animation:dotPop .25s ease;
+}
+
+@keyframes dotPop{
+    0%{transform:scale(.5);}
+    80%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+.keypad{
+    display:grid;
+    grid-template-columns:repeat(3,70px);
+    justify-content:center;
+    gap:12px;
+}
+
+.key{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:3px solid white;
+    background:#f7e2e6;
+    color:#7d4050;
+    font-size:25px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 4px 0 #b94c66;
+    transition:.15s;
+}
+
+.key:hover{
+    background:#ffc3d0;
+    transform:scale(1.08) rotate(5deg);
+}
+
+.key:active{
+    transform:scale(.9);
+}
+
+#error{
+    min-height:25px;
+    color:#b72f4d;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* ================= BIRTHDAY CARD ================= */
+
+.birthday-card{
+    width:min(800px,95%);
+    padding:40px 25px;
+    background:#fffaf9;
+    border:5px solid #f0a2b1;
+    border-radius:30px;
+    box-shadow:10px 10px 0 rgba(180,80,100,.15);
+    text-align:center;
+    animation:cardFloat 4s infinite ease-in-out;
+}
+
+@keyframes cardFloat{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+
+.age{
+    font-family:'Pacifico';
+    color:#e15f7b;
+    font-size:85px;
+    line-height:1;
+    animation:ageBounce 1.5s infinite;
+}
+
+@keyframes ageBounce{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+}
+
+/* ================= CAKE ================= */
+
+.cake-scene{
+    position:relative;
+    width:320px;
+    height:260px;
+    margin:15px auto;
+}
+
+.cake{
+    width:260px;
+    height:120px;
+    background:linear-gradient(#ff9cb3,#ef6685);
+    border-radius:20px 20px 35px 35px;
+    position:absolute;
+    bottom:20px;
+    left:30px;
+    box-shadow:inset 0 -15px rgba(180,50,80,.15);
+    animation:cakeBounce 2s infinite ease-in-out;
+}
+
+@keyframes cakeBounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+}
+
+.cake::before{
+    content:"";
+    position:absolute;
+    top:-25px;
+    left:0;
+    width:260px;
+    height:45px;
+    background:#fff1e5;
+    border-radius:50%;
+}
+
+.candle{
+    position:absolute;
+    width:28px;
+    height:80px;
+    background:repeating-linear-gradient(
+        45deg,
+        #fff,
+        #fff 8px,
+        #ff6d8c 8px,
+        #ff6d8c 16px
+    );
+    bottom:135px;
+    left:146px;
+    border-radius:5px;
+}
+
+.flame{
+    position:absolute;
+    width:28px;
+    height:42px;
+    background:linear-gradient(#fff6a0,#ffb22e,#ff613e);
+    border-radius:50%;
+    top:-37px;
+    left:0;
+    transform:rotate(45deg);
+    animation:flicker .6s infinite alternate;
+    box-shadow:0 0 25px #ffb347;
+}
+
+@keyframes flicker{
+    from{transform:rotate(45deg) scale(.9);}
+    to{transform:rotate(45deg) scale(1.15);}
+}
+
+.flame.out{
+    animation:blowout .8s forwards;
+}
+
+@keyframes blowout{
+    0%{
+        opacity:1;
+        transform:translateX(0) scale(1) rotate(45deg);
+    }
+    100%{
+        opacity:0;
+        transform:translateX(100px) scale(0) rotate(90deg);
+    }
+}
+
+.smoke{
+    position:absolute;
+    top:40px;
+    left:160px;
+    font-size:35px;
+    opacity:0;
+}
+
+.smoke.show{
+    animation:smoke 2s forwards;
+}
+
+@keyframes smoke{
+    0%{
+        opacity:.7;
+        transform:translateY(0);
+    }
+    100%{
+        opacity:0;
+        transform:translateY(-80px) translateX(25px);
+    }
+}
+
+.blow-btn{
+    border:none;
+    background:#f0b0bd;
+    color:#743c4b;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.blow-btn:hover{
+    transform:scale(1.08);
+}
+
+/* ================= TEDDY ================= */
+
+.teddy{
+    position:fixed;
+    right:25px;
+    bottom:20px;
+    width:100px;
+    height:120px;
+    z-index:20;
+    animation:teddyFloat 3s infinite ease-in-out;
+    pointer-events:none;
+}
+
+.teddy .ear{
+    position:absolute;
+    width:35px;
+    height:35px;
+    background:#b87952;
+    border-radius:50%;
+    top:0;
+}
+
+.teddy .ear.left{left:5px;}
+.teddy .ear.right{right:5px;}
+
+.teddy .head{
+    position:absolute;
+    width:75px;
+    height:65px;
+    background:#c98b63;
+    border-radius:50%;
+    left:13px;
+    top:10px;
+}
+
+.teddy .eye{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:#3c2520;
+    border-radius:50%;
+    top:28px;
+}
+
+.teddy .eye.left{left:22px;}
+.teddy .eye.right{right:22px;}
+
+.teddy .nose{
+    position:absolute;
+    width:15px;
+    height:11px;
+    background:#4a2922;
+    border-radius:50%;
+    left:30px;
+    top:39px;
+}
+
+.teddy .body{
+    position:absolute;
+    width:70px;
+    height:60px;
+    background:#bd7c55;
+    border-radius:40% 40% 45% 45%;
+    left:15px;
+    bottom:0;
+}
+
+.teddy .heart{
+    position:absolute;
+    font-size:24px;
+    z-index:3;
+    left:37px;
+    top:76px;
+    color:#f36f8d;
+    animation:heartBeat 1s infinite;
+}
+
+@keyframes teddyFloat{
+    0%,100%{
+        transform:translateY(0) rotate(-3deg);
+    }
+    50%{
+        transform:translateY(-15px) rotate(3deg);
+    }
+}
+
+@keyframes heartBeat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.3);}
+}
+
+/* ================= GIFT ================= */
+
+.gift-wrap{
+    margin:25px;
+    perspective:800px;
+}
+
+.gift{
+    width:230px;
+    height:200px;
+    background:#ee7f9b;
+    position:relative;
+    border-radius:12px;
+    cursor:pointer;
+    box-shadow:0 12px 20px rgba(0,0,0,.15);
+    animation:giftBounce 2s infinite;
+    transition:.4s;
+}
+
+@keyframes giftBounce{
+    50%{
+        transform:translateY(-12px) rotate(-2deg);
+    }
+}
+
+.gift:hover{
+    transform:scale(1.08) rotate(3deg);
+}
+
+.ribbon-v{
+    width:45px;
+    height:100%;
+    background:#ffe2e7;
+    position:absolute;
+    left:93px;
+}
+
+.ribbon-h{
+    width:100%;
+    height:40px;
+    background:#ffe2e7;
+    position:absolute;
+    top:80px;
+}
+
+.gift.open{
+    animation:openGift 1s forwards;
+}
+
+@keyframes openGift{
+    100%{
+        transform:scale(1.3) rotate(12deg);
+        opacity:0;
+    }
+}
+
+.gift-message{
+    display:none;
+    background:white;
+    padding:25px;
+    border-radius:25px;
+    max-width:600px;
+    font-family:'Patrick Hand';
+    font-size:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    animation:messagePop .7s ease;
+}
+
+@keyframes messagePop{
+    from{
+        opacity:0;
+        transform:scale(.5) translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+/* ================= MEMORIES ================= */
+
+.memory-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    max-width:1000px;
+}
+
+.polaroid{
+    background:white;
+    padding:10px 10px 30px;
+    width:240px;
+    box-shadow:8px 8px 20px rgba(0,0,0,.18);
+    transform:rotate(-4deg);
+    transition:.5s;
+    animation:photoEnter .8s ease both;
+}
+
+.polaroid:nth-child(2){animation-delay:.2s;}
+.polaroid:nth-child(3){animation-delay:.4s;}
+.polaroid:nth-child(4){animation-delay:.6s;}
+.polaroid:nth-child(5){animation-delay:.8s;}
+.polaroid:nth-child(6){animation-delay:1s;}
+
+@keyframes photoEnter{
+    from{
+        opacity:0;
+        transform:translateY(50px) rotate(10deg);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) rotate(-4deg);
+    }
+}
+
+.polaroid:nth-child(even){
+    transform:rotate(4deg);
+}
+
+.polaroid:hover{
+    transform:scale(1.08) rotate(0deg) translateY(-10px);
+    z-index:5;
+}
+
+.polaroid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    cursor:pointer;
+}
+
+.polaroid p{
+    font-family:'Patrick Hand';
+    font-size:20px;
+    margin-top:8px;
+}
+
+/* ================= PHOTO OPEN ================= */
+
+.photo-viewer{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:10000;
+    background:rgba(0,0,0,.88);
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+    cursor:pointer;
+}
+
+.photo-viewer.active{
+    display:flex;
+}
+
+.photo-viewer img{
+    max-width:92vw;
+    max-height:90vh;
+    object-fit:contain;
+    border:8px solid white;
+    border-radius:10px;
+    box-shadow:0 0 40px rgba(255,255,255,.25);
+    cursor:default;
+    animation:photoOpen .3s ease;
+}
+
+@keyframes photoOpen{
+    from{
+        opacity:0;
+        transform:scale(.75);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.photo-close{
+    position:absolute;
+    top:20px;
+    right:25px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#df6680;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:10001;
+}
+
+.photo-close:hover{
+    transform:scale(1.1);
+}
+
+/* ================= LETTER ================= */
+
+.letter{
+    width:min(800px,95%);
+    min-height:500px;
+    padding:45px;
+    text-align:left;
+    background:
+    repeating-linear-gradient(
+        white,
+        white 32px,
+        #dce0e2 33px
+    );
+    box-shadow:8px 8px 20px rgba(0,0,0,.2);
+    border-radius:10px;
+    animation:letterOpen 1s ease;
+}
+
+@keyframes letterOpen{
+    from{
+        opacity:0;
+        transform:rotateX(60deg) translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:rotateX(0) translateY(0);
+    }
+}
+
+.letter h2{
+    text-align:right;
+    font-family:'Pacifico';
+}
+
+#letterText{
+    font-family:'Patrick Hand';
+    font-size:23px;
+    line-height:1.45;
+    white-space:pre-line;
+}
+
+/* ================= HEARTS ================= */
+
+.heart-grid{
+    display:grid;
+    grid-template-columns:repeat(3,140px);
+    gap:25px;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.heart{
+    width:120px;
+    height:110px;
+    background:#e3748d;
+    position:relative;
+    transform:rotate(-45deg);
+    border-radius:20px 0 20px 20px;
+    cursor:pointer;
+    margin:25px;
+    transition:.3s;
+    animation:heartFloat 2s infinite ease-in-out;
+}
+
+.heart:nth-child(even){
+    animation-delay:.5s;
+}
+
+@keyframes heartFloat{
+    0%,100%{
+        transform:rotate(-45deg) translateY(0);
+    }
+    50%{
+        transform:rotate(-45deg) translateY(-8px);
+    }
+}
+
+.heart::before,
+.heart::after{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:#e3748d;
+    border-radius:50%;
+}
+
+.heart::before{
+    top:-60px;
+    left:0;
+}
+
+.heart::after{
+    left:60px;
+    top:0;
+}
+
+.heart span{
+    position:absolute;
+    z-index:5;
+    transform:rotate(45deg);
+    width:125px;
+    left:0;
+    top:35px;
+    color:white;
+    font-size:15px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.heart:hover{
+    transform:rotate(-45deg) scale(1.15);
+}
+
+.heart-message{
+    margin-top:35px;
+    background:white;
+    min-height:75px;
+    width:min(650px,90%);
+    padding:20px;
+    border-radius:20px;
+    font-family:'Patrick Hand';
+    font-size:24px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+/* ================= MUSIC ================= */
+
+.music-card{
+    background:rgba(255,255,255,.9);
+    padding:30px;
+    width:min(650px,95%);
+    border-radius:30px;
+    box-shadow:10px 10px 20px rgba(0,0,0,.15);
+    text-align:center;
+    animation:musicCard 3s infinite ease-in-out;
+}
+
+@keyframes musicCard{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-7px);}
+}
+
+.record{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    background:repeating-radial-gradient(
+        circle,
+        #222,
+        #222 8px,
+        #333 9px,
+        #111 12px
+    );
+    margin:15px auto;
+    position:relative;
+    animation:spin 5s linear infinite;
+    animation-play-state:paused;
+    box-shadow:0 0 30px rgba(0,0,0,.3);
+}
+
+.record::after{
+    content:"♡";
+    color:white;
+    font-size:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:55px;
+    height:55px;
+    background:#e66c85;
+    border-radius:50%;
+    position:absolute;
+    left:58px;
+    top:58px;
+}
+
+.record.playing{
+    animation-play-state:running;
+    box-shadow:0 0 35px #e66c85;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.play-btn{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    border:none;
+    background:#d85d78;
+    color:white;
+    font-size:25px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.play-btn:hover{
+    transform:scale(1.15);
+}
+
+/* ================= FINAL PHOTO ================= */
+
+.final-photo{
+    width:min(350px,85%);
+    max-height:400px;
+    object-fit:cover;
+    padding:10px;
+    background:white;
+    box-shadow:10px 10px 20px rgba(0,0,0,.2);
+    transform:rotate(-3deg);
+    animation:finalPhoto 4s infinite ease-in-out;
+}
+
+@keyframes finalPhoto{
+    0%,100%{
+        transform:rotate(-3deg) translateY(0);
+    }
+    50%{
+        transform:rotate(3deg) translateY(-12px);
+    }
+}
+
+.final-card{
+    background:rgba(255,255,255,.85);
+    padding:25px;
+    border-radius:30px;
+    max-width:700px;
+    margin-top:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .page{
+        padding:15px;
+    }
+
+    .keypad{
+        grid-template-columns:repeat(3,60px);
+    }
+
+    .key{
+        width:60px;
+        height:60px;
+    }
+
+    .heart-grid{
+        grid-template-columns:repeat(2,130px);
+        gap:5px;
+    }
+
+    .heart{
+        transform:rotate(-45deg) scale(.82);
+        margin:10px;
+    }
+
+    .letter{
+        padding:30px 20px;
+    }
+
+    .polaroid{
+        width:200px;
+    }
+
+    .polaroid img{
+        height:230px;
+    }
+
+    .teddy{
+        transform:scale(.75);
+        transform-origin:bottom right;
+        right:5px;
+    }
+
+    .photo-viewer img{
+        max-width:95vw;
+        max-height:80vh;
+    }
+
+    .photo-close{
+        top:10px;
+        right:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="floating-hearts" id="floatingHearts"></div>
+
+<!-- TEDDY -->
+<div class="teddy">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+
+    <div class="head">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose"></div>
+    </div>
+
+    <div class="body"></div>
+    <div class="heart">♥</div>
+</div>
+
+
+<!-- ================= PHOTO VIEWER ================= -->
+
+<div class="photo-viewer" id="photoViewer" onclick="closePhoto(event)">
+
+    <button class="photo-close" onclick="closePhoto()">
+        ✕
+    </button>
+
+    <img id="openedPhoto" src="" alt="Opened Memory">
+
+</div>
+
+
+<!-- ================= PAGE 1 ================= -->
+
+<section class="page active" id="page1">
+
+<div class="lock-box">
+
+<h2>Shhh... 🤫</h2>
+
+<div class="typing-box" id="lockMessage"></div>
+
+<div class="passcode">
+
+<div class="pass-dot" id="d1"></div>
+<div class="pass-dot" id="d2"></div>
+<div class="pass-dot" id="d3"></div>
+<div class="pass-dot" id="d4"></div>
+
+</div>
+
+<div class="keypad">
+
+<button class="key" onclick="press(1)">1</button>
+<button class="key" onclick="press(2)">2</button>
+<button class="key" onclick="press(3)">3</button>
+
+<button class="key" onclick="press(4)">4</button>
+<button class="key" onclick="press(5)">5</button>
+<button class="key" onclick="press(6)">6</button>
+
+<button class="key" onclick="press(7)">7</button>
+<button class="key" onclick="press(8)">8</button>
+<button class="key" onclick="press(9)">9</button>
+
+<button class="key" onclick="clearCode()">✦</button>
+<button class="key" onclick="press(0)">0</button>
+<button class="key" onclick="backspace()">⌫</button>
+
+</div>
+
+<div id="error"></div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="page" id="page2">
+
+<div class="birthday-card">
+
+<h1>Happy Birthday</h1>
+
+<div class="age">17</div>
+
+<h2>Meri Piddi ❤️</h2>
+
+<div class="typing-box" id="birthdayMessage"></div>
+
+<div class="cake-scene">
+
+<div class="smoke" id="smoke">〰️</div>
+
+<div class="candle">
+<div class="flame" id="flame"></div>
+</div>
+
+<div class="cake"></div>
+
+</div>
+
+<button class="blow-btn" onclick="blowCandle()">
+Make a wish & Blow the candle 💨🕯️
+</button>
+
+<button class="next-btn" onclick="nextPage(3)">
+Next surprise 🎁
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================= PAGE 3 ================= -->
+
+<section class="page" id="page3">
+
+<h1>Tumhare liye ek surprise 🎁</h1>
+
+<div class="typing-box" id="giftTyping"></div>
+
+<div class="gift-wrap">
+
+<div class="gift" id="gift" onclick="openGift()">
+
+<div class="ribbon-v"></div>
+<div class="ribbon-h"></div>
+
+</div>
+
+</div>
+
+<div class="gift-message" id="giftMessage"></div>
+
+<button class="next-btn" onclick="nextPage(4)">
+Memories dekho 📸
+</button>
+
+</section>
+
+
+<!-- ================= PAGE 4 MEMORIES ================= -->
+
+<section class="page" id="page4">
+
+<h1>Our Cute Memories 📸</h1>
+
+<div class="typing-box" id="memoryTyping"></div>
+
+<div class="memory-grid">
+
+<div class="polaroid">
+<img src="photo1.jpg"
+     alt="Memory 1"
+     onclick="openPhoto(this.src)">
+<p>Meri piddi 🥹❤️</p>
+</div>
+
+<div class="polaroid">
+<img src="photo2.jpg"
+     alt="Memory 2"
+     onclick="openPhoto(this.src)">
+<p>My cute 🫶</p>
+</div>
+
+<div class="polaroid">
+<img src="photo3.jpg"
+     alt="Memory 3"
+     onclick="openPhoto(this.src)">
+<p>Ye wali photo 😭❤️</p>
+</div>
+
+<div class="polaroid">
+<img src="photo4.jpg"
+     alt="Memory 4"
+     onclick="openPhoto(this.src)">
+<p>Pyaari si tum 🥹</p>
+</div>
+
+<div class="polaroid">
+<img src="photo5.jpg"
+     alt="Memory 5"
+     onclick="openPhoto(this.src)">
+<p>Another cute memory 💗</p>
+</div>
+
+<div class="polaroid">
+<img src="photo6.jpg"
+     alt="Memory 6"
+     onclick="openPhoto(this.src)">
+<p>Forever special 🫶✨</p>
+</div>
+
+</div>
+
+<button class="next-btn" onclick="nextPage(5)">
+Ek letter hai 💌
+</button>
+
+</section>
+
+
+<!-- ================= PAGE 5 ================= -->
+
+<section class="page" id="page5">
+
+<div class="letter">
+
+<h2>For My Piddi 💌</h2>
+
+<div id="letterText"></div>
+
+</div>
+
+<button class="next-btn" onclick="nextPage(6)">
+Aur bhi hai ❤️
+</button>
+
+</section>
+
+
+<!-- ================= PAGE 6 ================= -->
+
+<section class="page" id="page6">
+
+<h1>Why You Are So Special ❤️</h1>
+
+<div class="typing-box" id="heartTyping"></div>
+
+<div class="heart-grid">
+
+<div class="heart"
+onclick="heartMessage('Tumhari smile dekh ke automatically mood acha ho jata hai meri piddi 🥹❤️')">
+<span>Tumhari Smile 😊</span>
+</div>
+
+<div class="heart"
+onclick="heartMessage('Tumhara cute sa pagalpan honestly bohot adorable hai 😂❤️')">
+<span>Cute Pagalpan 🤪</span>
+</div>
+
+<div class="heart"
+onclick="heartMessage('Bas tum jaisi ho waise hi rehna, wahi tumhe special banata hai ❤️')">
+<span>Being You 🌸</span>
+</div>
+
+<div class="heart"
+onclick="heartMessage('Hamari memories chhoti ho ya badi, sab mere liye special hain 📸💗')">
+<span>Memories 📸</span>
+</div>
+
+<div class="heart"
+onclick="heartMessage('Tumhari awaaz bhi ek alag hi comfort deti hai meri cute 🥹🎵')">
+<span>Tumhari Awaaz 🎵</span>
+</div>
+
+<div class="heart"
+onclick="heartMessage('Bas itna samajh lo... meri piddi bohot special hai ❤️')">
+<span>My Piddi 💗</span>
+</div>
+
+</div>
+
+<div class="heart-message" id="heartMessage">
+Click any heart ❤️
+</div>
+
+<button class="next-btn" onclick="nextPage(7)">
+Ek song bhi hai 🎵
+</button>
+
+</section>
+
+
+<!-- ================= PAGE 7 SONG ================= -->
+
+<section class="page" id="page7">
+
+<h1>A Song For My Piddi 🎵</h1>
+
+<div class="typing-box" id="musicTyping"></div>
+
+<div class="music-card">
+
+<div class="record" id="record"></div>
+
+<h2 style="font-size:35px;">
+Harleys in Hawaii ❤️
+</h2>
+
+<p>
+Sirf tumhare liye, tumhara fav song — meri piddi ❤️🎧
+</p>
+
+<br>
+
+<button class="play-btn"
+        id="playButton"
+        onclick="playSong()">
+▶
+</button>
+
+<audio id="birthdayAudio" preload="auto">
+
+<source src="./harleys-in-hawaii.mp3" type="audio/mpeg">
+
+Your browser does not support audio.
+
+</audio>
+
+</div>
+
+<button class="next-btn" onclick="nextPage(8)">
+Final surprise 🎉
+</button>
+
+</section>
+
+
+<!-- ================= PAGE 8 ================= -->
+
+<section class="page" id="page8">
+
+<h1>Happy Birthday Again, Meri Piddi! 🎂💗</h1>
+
+<img
+    src="special.png"
+    class="final-photo"
+    alt="Special Birthday Photo"
+>
+
+<div class="final-card">
+
+<div class="typing-box" id="finalTyping"></div>
+
+</div>
+
+<button class="next-btn" onclick="nextPage(1)">
+Start Again 🔄
+</button>
+
+</section>
+
+
+<script>
+
+/* ================= FLOATING HEARTS ================= */
+
+function createFloatingHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.className="float-heart";
+
+    const hearts=[
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "💞",
+        "🌸",
+        "✨"
+    ];
+
+    heart.innerHTML=
+        hearts[Math.floor(Math.random()*hearts.length)];
+
+    heart.style.left=Math.random()*100+"%";
+
+    heart.style.fontSize=
+        (15+Math.random()*25)+"px";
+
+    heart.style.animationDuration=
+        (5+Math.random()*6)+"s";
+
+    document.getElementById("floatingHearts")
+        .appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },12000);
+}
+
+setInterval(createFloatingHeart,500);
+
+
+/* ================= SPARKLES ================= */
+
+function addSparkles(){
+
+    document.querySelectorAll(".page").forEach(page=>{
+
+        for(let i=0;i<5;i++){
+
+            const sparkle=document.createElement("div");
+
+            sparkle.className="sparkle";
+            sparkle.innerHTML="✦";
+
+            sparkle.style.left=
+                Math.random()*90+"%";
+
+            sparkle.style.top=
+                Math.random()*90+"%";
+
+            sparkle.style.animationDelay=
+                Math.random()*2+"s";
+
+            page.appendChild(sparkle);
+        }
+
+    });
+
+}
+
+addSparkles();
+
+
+/* ================= TYPING ================= */
+
+function typeWriter(element,text,speed=30){
+
+    element.innerHTML="";
+
+    let i=0;
+
+    function type(){
+
+        if(i < text.length){
+
+            if(text.charAt(i)==="\n"){
+                element.innerHTML+="<br>";
+            }else{
+                element.innerHTML+=text.charAt(i);
+            }
+
+            i++;
+
+            setTimeout(type,speed);
+        }
+
+    }
+
+    type();
+
+}
+
+
+/* ================= PASSCODE ================= */
+
+let code="";
+
+const correctCode="2308";
+
+typeWriter(
+    document.getElementById("lockMessage"),
+    "Yeh ek secret surprise hai meri piddi 🤭💗\nPehle apna special passcode enter karo 🔐",
+    35
+);
+
+function press(num){
+
+    if(code.length<4){
+
+        code+=num;
+
+        updateDots();
+
+    }
+
+    if(code.length===4){
+
+        setTimeout(checkCode,300);
+
+    }
+
+}
+
+function updateDots(){
+
+    for(let i=1;i<=4;i++){
+
+        document.getElementById("d"+i).innerHTML=
+        code[i-1] ? "●" : "";
+
+    }
+
+}
+
+function clearCode(){
+
+    code="";
+
+    updateDots();
+
+    document.getElementById("error").innerHTML="";
+
+}
+
+function backspace(){
+
+    code=code.slice(0,-1);
+
+    updateDots();
+
+}
+
+function checkCode(){
+
+    if(code===correctCode){
+
+        nextPage(2);
+
+    }else{
+
+        document.getElementById("error").innerHTML=
+        "Galat passcode 😜 Meri piddi ko yaad nahi kya?";
+
+        setTimeout(clearCode,1200);
+
+    }
+
+}
+
+
+/* ================= PAGE CHANGE ================= */
+
+function nextPage(number){
+
+    const audio=document.getElementById("birthdayAudio");
+
+    if(number !== 7 && audio){
+
+        audio.pause();
+
+        audio.currentTime=0;
+
+        document.getElementById("record")
+        .classList.remove("playing");
+
+        document.getElementById("playButton")
+        .innerHTML="▶";
+
+    }
+
+    document.querySelectorAll(".page").forEach(page=>{
+
+        page.classList.remove("active");
+
+    });
+
+    document.getElementById("page"+number)
+    .classList.add("active");
+
+    window.scrollTo(0,0);
+
+    startPageAnimation(number);
+
+}
+
+
+/* ================= PAGE ANIMATIONS ================= */
+
+function startPageAnimation(page){
+
+    if(page===2){
+
+        typeWriter(
+            document.getElementById("birthdayMessage"),
+            "Aaj meri cute piddi 17 ki ho gayi 🥹🎂💗\nPehle ek wish maango aur candle blow karo!",
+            30
+        );
+
+    }
+
+    if(page===3){
+
+        typeWriter(
+            document.getElementById("giftTyping"),
+            "Is gift ke andar kuch chhota sa hai... but sirf tumhare liye meri piddi 🤭🎁",
+            30
+        );
+
+    }
+
+    if(page===4){
+
+        typeWriter(
+            document.getElementById("memoryTyping"),
+            "Kuch yaadein aisi hoti hain jo delete nahi hoti... bas dil mein save ho jaati hain ❤️",
+            30
+        );
+
+    }
+
+    if(page===5){
+
+        setTimeout(startLetter,300);
+
+    }
+
+    if(page===6){
+
+        typeWriter(
+            document.getElementById("heartTyping"),
+            "In hearts pe click karo meri cute... har ek mein tumhare liye kuch hai ❤️",
+            30
+        );
+
+    }
+
+    if(page===7){
+
+        typeWriter(
+            document.getElementById("musicTyping"),
+            "Sirf tumhare liye... tumhara fav song ❤️🎧\nBas headphones lagao meri piddi aur enjoy karo 🥹💗",
+            30
+        );
+
+    }
+
+    if(page===8){
+
+        typeWriter(
+            document.getElementById("finalTyping"),
+            "Happy 17th Birthday meri piddi! 🎂❤️\nBas hamesha khush rehna, haste rehna aur apne dreams ke peeche bhaagte rehna.\n\nTum bohot cute ho aur ye chhota sa surprise specially tumhare birthday ke liye banaya hai 🥹💗\n\nEnjoy your day! ❤️✨",
+            30
+        );
+
+    }
+
+}
+
+
+/* ================= PHOTO OPEN ================= */
+
+function openPhoto(src){
+
+    const viewer=document.getElementById("photoViewer");
+
+    const image=document.getElementById("openedPhoto");
+
+    image.src=src;
+
+    viewer.classList.add("active");
+
+}
+
+
+/* ================= PHOTO CLOSE ================= */
+
+function closePhoto(event){
+
+    const viewer=document.getElementById("photoViewer");
+
+    if(event && event.target !== viewer){
+        return;
+    }
+
+    viewer.classList.remove("active");
+
+    document.getElementById("openedPhoto").src="";
+
+}
+
+
+/* ================= ESC TO CLOSE PHOTO ================= */
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key==="Escape"){
+
+        document.getElementById("photoViewer")
+        .classList.remove("active");
+
+        document.getElementById("openedPhoto").src="";
+
+    }
+
+});
+
+
+/* ================= CANDLE ================= */
+
+function blowCandle(){
+
+    const flame=document.getElementById("flame");
+
+    if(!flame.classList.contains("out")){
+
+        flame.classList.add("out");
+
+        document.getElementById("smoke")
+        .classList.add("show");
+
+        createHeartBurst();
+
+    }
+
+}
+
+
+/* ================= HEART BURST ================= */
+
+function createHeartBurst(){
+
+    for(let i=0;i<15;i++){
+
+        const heart=document.createElement("div");
+
+        heart.innerHTML="❤️";
+
+        heart.style.position="fixed";
+        heart.style.left="50%";
+        heart.style.top="50%";
+        heart.style.fontSize="20px";
+        heart.style.zIndex="2000";
+        heart.style.pointerEvents="none";
+
+        const x=(Math.random()-.5)*500;
+        const y=(Math.random()-.5)*400;
+
+        heart.animate(
+            [
+                {
+                    transform:"translate(-50%,-50%) scale(.5)",
+                    opacity:1
+                },
+                {
+                    transform:
+                    `translate(calc(-50% + ${x}px),calc(-50% + ${y}px)) scale(1.5)`,
+                    opacity:0
+                }
+            ],
+            {
+                duration:1200,
+                easing:"ease-out"
+            }
+        );
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },1200);
+
+    }
+
+}
+
+
+/* ================= GIFT ================= */
+
+function openGift(){
+
+    const gift=document.getElementById("gift");
+
+    if(!gift.classList.contains("open")){
+
+        gift.classList.add("open");
+
+        createHeartBurst();
+
+        setTimeout(()=>{
+
+            const box=
+            document.getElementById("giftMessage");
+
+            box.style.display="block";
+
+            typeWriter(
+                box,
+                "SURPRISEEEE! 🎉💗\n\nHappy Birthday meri piddi! Ye poori website specially tumhare liye banayi hai 🥹❤️\nAbhi aur surprises baaki hain... 🤭✨",
+                30
+            );
+
+        },600);
+
+    }
+
+}
+
+
+/* ================= LETTER ================= */
+
+function startLetter(){
+
+const letter=`Happy 17th Birthday meri piddi! 🎂❤️
+
+Pata hai, ye website banane ka reason sirf itna tha ki tumhare birthday pe tumhare paas kuch aisa ho jo tum kabhi bhi open karke dekh sako.
+
+Tum bahut special ho yaar, seriously! 🥹
+
+Tumhari smile, tumhara cute sa pagalpan aur tumhari chhoti chhoti baatein... sab kuch apne aap mein special hai.
+
+Bas aise hi hamesha khush rehna meri cute.
+
+17 ka ye naya chapter tumhare liye bohot saari khushiyan, success aur beautiful memories laaye. ✨
+
+Aur haan...
+
+Meri piddi kabhi apni cuteness kam mat karna 😂❤️
+
+Happy Birthday once again! 🎂💗`;
+
+typeWriter(
+    document.getElementById("letterText"),
+    letter,
+    18
+);
+
+}
+
+
+/* ================= HEARTS ================= */
+
+function heartMessage(message){
+
+    createHeartBurst();
+
+    typeWriter(
+        document.getElementById("heartMessage"),
+        message,
+        25
+    );
+
+}
+
+
+/* ================= MUSIC ================= */
+
+function playSong(){
+
+    const audio=document.getElementById("birthdayAudio");
+
+    const record=document.getElementById("record");
+
+    const button=document.getElementById("playButton");
+
+    if(audio.paused){
+
+        audio.play()
+        .then(()=>{
+
+            record.classList.add("playing");
+
+            button.innerHTML="❚❚";
+
+        })
+        .catch((error)=>{
+
+            alert(
+                "Song could not play. Please check that harleys-in-hawaii.mp3 is uploaded correctly."
+            );
+
+            console.log(error);
+
+        });
+
+    }else{
+
+        audio.pause();
+
+        record.classList.remove("playing");
+
+        button.innerHTML="▶";
+
+    }
+
+}
+
+
+/* ================= SONG END ================= */
+
+document.getElementById("birthdayAudio")
+.addEventListener("ended",function(){
+
+    document.getElementById("record")
+    .classList.remove("playing");
+
+    document.getElementById("playButton")
+    .innerHTML="▶";
+
+});
+
+</script>
+
+</body>
+</html>
